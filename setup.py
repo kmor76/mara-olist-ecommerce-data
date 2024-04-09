@@ -8,6 +8,7 @@ setup(
                  "in a PostgreSQL database"),
 
     install_requires=[
+        'psycopg2-binary',
         'click>=6.0',
         'wheel>=0.29'
     ],
