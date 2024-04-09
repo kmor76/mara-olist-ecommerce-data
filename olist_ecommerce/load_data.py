@@ -55,7 +55,7 @@ def insert_data(dataset):
 
     table_names = ECOMMERCE_TABLES if 'ecommerce' in dataset else MARKETING_TABLES
 
-    pathlist = pathlib.Path(config.data_dir() / dataset).glob('**/*.csv')
+    pathlist = pathlib.Path(config.data_dir()+ "/" +dataset).glob('**/*.csv')
     for csv_file, table_name in zip(sorted(pathlist), table_names):
         with open(csv_file) as file:
             with postgres_cursor_context() as cursor:
